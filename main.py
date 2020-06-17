@@ -141,6 +141,8 @@ class Chatbot(object):
         else:
           predicted_sentence, _, _, _ = self.reply(usr_input)
           print(f"[BOT]: {predicted_sentence}")
+    elif config["mode"] == "script":
+      print("\nMODE: script\n==========\n")
 
   def train(self):
     # The @tf.function trace-compiles train_step into a TF graph for faster

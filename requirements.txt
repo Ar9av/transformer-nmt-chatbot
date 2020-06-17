@@ -5,3 +5,4 @@ anytree==2.8.0
 numpy==1.18.5
 tensorflow-datasets==3.1.0 
 beautifulsoup4==4.9.1
+praw==7.0.0

@@ -16,7 +16,7 @@ max_checkpoint: 10
 custom_checkpoint: null
 reddit_data: True
 
-# train/eval/test
-mode: "test"
+# train/eval/test/script
+mode: "eval"
 eval_limit: 10
 exit_phrase: ".exit"
