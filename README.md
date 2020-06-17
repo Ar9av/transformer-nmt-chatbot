@@ -82,7 +82,7 @@ I am fine
 You can directly train it over reddit conversations just by providing the subreddits and number of pages for which you want the data.
 You can configure this using ``config.yml`` and change the ``reddit_data`` to ``True``. You can mention the subreddits, pages, sorting criteria in ``reddit_config.yml``.
 
-!(reddit-config)(https://github.com/Ar9av/transformer-nmt-chatbot/blob/master/resources/reddit_config.png)
+![reddit-config](https://github.com/Ar9av/transformer-nmt-chatbot/blob/master/resources/reddit_config.png)
 
 Change the ``type`` in ``config.yml`` to ``train`` and run the following command
 
