@@ -10,13 +10,11 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
 
-# options = webdriver.ChromeOptions()
-# options.add_argument("-no-sandbox")
-# options.add_argument("-headless")
-# options.add_argument("-disable-dev-shm-usage")
-# d = webdriver.Chrome("chromedriver", options=options)
-d = webdriver.Chrome(ChromeDriverManager().install())
-
+options = webdriver.ChromeOptions()
+options.add_argument("-no-sandbox")
+options.add_argument("-headless")
+options.add_argument("-disable-dev-shm-usage")
+d = webdriver.Chrome("chromedriver", options=options)
 
 class NodeCom(NodeMixin):
   def __init__(self, name, attrs=None, parent=None, children=None):
