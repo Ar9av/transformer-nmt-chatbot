@@ -60,7 +60,9 @@ def get_data(config_path):
             d.get(page)
     print("Total posts:", len(posts))
 
-    for post in posts:
+    print("Getting comments for the post extracted")
+    
+    for post in tqdm.tqdm(posts):
         d.get(HTTPS + post["data-permalink"])
         html = d.page_source
         htlist = soup(html, "html.parser").select("div.nestedlisting")
