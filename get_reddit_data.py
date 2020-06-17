@@ -8,7 +8,6 @@ from anytree import Node, NodeMixin, RenderTree
 from bs4 import BeautifulSoup as soup
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-from webdriver_manager.chrome import ChromeDriverManager
 
 options = webdriver.ChromeOptions()
 options.add_argument("-no-sandbox")

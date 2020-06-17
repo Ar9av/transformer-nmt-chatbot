@@ -3,6 +3,13 @@
 nmt-chatbot is the implementation of chatbot using [Google's Transformer model for language understanding](https://www.tensorflow.org/tutorials/text/transformer).
 Main purpose of this project is to make a chatbot, but it's fully compatible with Neural Machine Translation and still can be used for sentence translations between two languages.
 
+## Straight Usage
+
+Open the ``Reddit_Chatbot.ipynb`` on Google Colab to use it on the go.
+
+[Link to colab notebook](https://colab.research.google.com/drive/1ZHJUbvKbHjMZB08_s5JItvuxjcFBC4JW?usp=sharing)
+
+
 ## Getting Started
 
 ```
