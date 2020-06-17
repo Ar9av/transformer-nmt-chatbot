@@ -10,21 +10,47 @@ Open the ``Reddit_Chatbot.ipynb`` on Google Colab to use it on the go.
 [Link to colab notebook](https://colab.research.google.com/drive/1ZHJUbvKbHjMZB08_s5JItvuxjcFBC4JW?usp=sharing)
 
 
-## Getting Started
+### Installation
 
+### Clone
+
+- Clone this repo to your local machine using
+```shell
+$ git clone https://github.com/Ar9av/transformer-nmt-chatbot.git
 ```
-pip install -r requirements.txt
+
+change the working directory
+
+```shell
+$ cd transformer-nmt-chatbot
+```
+
+### Setup
+
+- Install the requirements using the following commands
+
+```shell
+$ pip install -r requirements.txt
+$ sudo apt-get install chromium-chromedriver
 ```
 
 ### Testing the Chatbot
 
 In the ``config.yml`` change the ``type`` parameter to ``test`` and run the following command
 
-```
-python main.py
+```shell
+$ python main.py
 ```
 
-You would get an interface in the terminal itself.git
+#### Example
+
+You would get an interface in the terminal.
+
+Here is an example of mental health chatbot which I trained on r/therapy, r/mentalhealth subreddit for 100 epochs:
+
+![chat-example](https://github.com/Ar9av/transformer-nmt-chatbot/blob/master/resources/example.gif)
+
+
 
 ### Configuring the Training Parameters
 
@@ -61,3 +87,22 @@ Change the ``type`` in ``config.yml`` to ``train`` and run the following command
 python main.py
 
 ```
+
+## Contributing
+
+> To get started...
+
+### Step 1
+
+- **Option 1**
+    - 🍴 Fork this repo!
+
+- **Option 2**
+    - 👯 Clone this repo to your local machine using 
+```shell
+$ git clone https://github.com/Ar9av/transformer-nmt-chatbot.git
+```
+
+### Step 2
+
+- 🔃 Create a new pull request using <a href="https://github.com/Ar9av/transformer-nmt-chatbot/compare/" target="_blank">`hhttps://github.com/Ar9av/transformer-nmt-chatbot/compare/`</a>.
