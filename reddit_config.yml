@@ -2,8 +2,7 @@ https : "https://old.reddit.com/"
 
 no_of_pages : 1
 #provide a list of subreddits you want to scrape
-subreddits: [ "r/therapy"] 
-# "r/CBT", "r/mentalhealth", "r/depression_help", "r/overcoming", "r/Anxiety", "r/whatsbotheringyou"]
+subreddits: [ "r/AMA", "r/explainlikeim5"]
 
 # Sorting type, set to hot, new, rising, controversial, top, or gilded
 sort : "top" 
