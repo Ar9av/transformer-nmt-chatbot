@@ -1,7 +1,7 @@
 # Chatbot based on Transformer NMT Model
 
 nmt-chatbot is the implementation of chatbot using [Google's Transformer model for language understanding](https://www.tensorflow.org/tutorials/text/transformer).
-Main purpose of that project is to make a chatbot, but it's fully compatible with Neural Machine Translation and still can be used for sentence translations between two languages.
+Main purpose of this project is to make a chatbot, but it's fully compatible with Neural Machine Translation and still can be used for sentence translations between two languages.
 
 ## Getting Started
 
