@@ -2,12 +2,13 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 import numpy as np
 from utils import load_data, load_tokenizers, create_tokenizers, prepare_data
-from layers import CustomSchedule, Transformer, create_masks
+from layers import CustomSchedule, Transformer, create_masks, loss_function
 from get_reddit_data import get_data
 from dataloader import loader
 import os
 import time
 import yaml
+import random
 
 print(f"using tensorflow v{tf.__version__}")
 print(f"using tensorflow.keras v{tf.keras.__version__}")
@@ -62,7 +63,7 @@ class Chatbot(object):
       if os.path.exists(os.path.join(config_path, "data/train.from")) and os.path.exists(os.path.join(config_path, "data/train.to")): 
         pass
       else:
-        if config["reddit_data"] == "True":
+        if config["reddit_data"]:
           print("Starting to generate train data from Subreddits.")
           get_data(config_path)
       loader(config_path)
@@ -112,12 +113,12 @@ class Chatbot(object):
         [self.inputs_tokenizer, self.outputs_tokenizer], self.max_length)
 
       self.train()
-      # do some simple evaluation after training
-      for (ins, outs) in zip(self.inputs, self.outputs):
-        predicted_sentence, attention_weights, sentence, result = self.reply(ins)
-        print(f"\nInput: {ins}")
+      eval_indexes = random.choices(range(len(self.inputs)), k = int(len(self.inputs) * 0.01))
+      for i in eval_indexes:
+        predicted_sentence, attention_weights, sentence, result = self.reply(self.inputs[i])
+        print(f"\nInput: {self.inputs[i]}")
         print(f"Predicted: {predicted_sentence}")
-        print(f"Sample output: {outs}")
+        print(f"Sample output: {self.outputs[i]}")
 
     elif config["mode"] == "eval":
       print("\nMODE: eval\n==========\n")
