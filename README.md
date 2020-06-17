@@ -54,11 +54,17 @@ Here is an example of mental health chatbot which I trained on r/therapy, r/ment
 
 ### Configuring the Training Parameters
 
-Change the parameters in ``config.yml`` and change the ``type`` to ``train`` and run the following command
+Change the parameters in ``config.yml`` and change the ``type`` to ``train`` and run the following command.
 
+```shell
+$ python main.py
 ```
-python main.py
-```
+
+#### Custom Dataset
+
+If you're using your **own custom dataset** keep it in the following format.
+
+Change the parameter `reddit_data` in ``config.yml`` to `False`.
 
 The training data should be inside the ``data`` folder.
 The conversation data should be kept in 2 files ``train.to`` and ``train.from``.
@@ -75,6 +81,7 @@ How are you
 ```
 Hi
 I am fine
+
 ```
 
 ### Train on Reddit's conversation threads
@@ -86,8 +93,8 @@ You can configure this using ``config.yml`` and change the ``reddit_data`` to ``
 
 Change the ``type`` in ``config.yml`` to ``train`` and run the following command
 
-```
-python main.py
+```shell
+$ python main.py
 
 ```
 
@@ -98,8 +105,8 @@ After training over a subreddit data, we can use the model to interference throu
 
 Configure the bot (app), user credentials in `reddit_credentials.yml`
 
-```
-python reddit_bot.py
+```shell
+$ python reddit_bot.py
 
 ```
 
