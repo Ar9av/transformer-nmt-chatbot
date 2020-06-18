@@ -35,25 +35,33 @@ class Chatbot(object):
     self.custom_checkpoint = config["custom_checkpoint"]
     self.eval_limit = config["eval_limit"]
     self.exit_phrase = config["exit_phrase"]
-
+    
     if config["storage_path"] != None:
       self.storage_path = config["storage_path"]
     else:
       self.storage_path = "./"
+    
+    if config["ckpt_path"] != None:
+      self.ckpt_path = config["ckpt_path"]
+    else:
+      self.ckpt_path = "./"
 
     if not self.storage_path.endswith("/"):
       self.storage_path += "/"
+    
+    if not self.ckpt_path.endswith("/"):
+      self.ckpt_path += "/"
 
     self.data_path = f"{self.storage_path}data"
-    self.checkpoint_path = f"{self.storage_path}checkpoints/train"
+    self.checkpoint_path = f"{self.ckpt_path}checkpoints/train"
     self.tokenizer_path = f"{self.storage_path}tokenizers"
     self.inputs_savepath = f"{self.tokenizer_path}/inputs_token"
     self.outputs_savepath = f"{self.tokenizer_path}/outputs_token"
 
-    if not os.path.exists(f"{self.storage_path}checkpoints"):
-      os.mkdir(f"{self.storage_path}checkpoints")
-    if not os.path.exists(f"{self.storage_path}checkpoints/train"):
-      os.mkdir(f"{self.storage_path}checkpoints/train")
+    if not os.path.exists(f"{self.ckpt_path}checkpoints"):
+      os.mkdir(f"{self.ckpt_path}checkpoints")
+    if not os.path.exists(f"{self.ckpt_path}checkpoints/train"):
+      os.mkdir(f"{self.ckpt_path}checkpoints/train")
     if not os.path.exists(f"{self.storage_path}tokenizers"):
       os.mkdir(f"{self.storage_path}tokenizers")
     if not os.path.exists(f"{self.storage_path}models"):
