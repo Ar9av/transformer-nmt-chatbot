@@ -5,9 +5,9 @@ Main purpose of this project is to make a chatbot, but it's fully compatible wit
 
 ## Straight Usage
 
-Open the ``Reddit_Chatbot.ipynb`` on Google Colab to use it on the go.
+Open the following Google Colab notebook to use it on the go.
 
-[Link to colab notebook](https://colab.research.google.com/drive/1ZHJUbvKbHjMZB08_s5JItvuxjcFBC4JW?usp=sharing)
+[Link to colab notebook](https://colab.research.google.com/drive/17TmAJCD2jmydaN7TDJ32Tc8FsMVYzalH?usp=sharing)
 
 
 ### Installation
