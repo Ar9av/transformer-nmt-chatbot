@@ -1,5 +1,5 @@
 PyYAML==5.3.1
-tensorflow==2.2.0 
+tensorflow==2.3.1 
 selenium==3.141.0 
 anytree==2.8.0
 numpy==1.18.5
