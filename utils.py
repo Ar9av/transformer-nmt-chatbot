@@ -41,9 +41,9 @@ def shuffle_inputs_outputs(inputs, outputs):
 def create_tokenizers(inputs_outputs, inputs_outputs_savepaths, target_vocab_size):
   inputs, outputs = inputs_outputs
   inputs_savepath, outputs_savepath = inputs_outputs_savepaths
-  inputs_tokenizer = tfds.features.text.SubwordTextEncoder.build_from_corpus(
+  inputs_tokenizer = tfds.deprecated.text.SubwordTextEncoder.build_from_corpus(
     inputs, target_vocab_size=target_vocab_size)
-  outputs_tokenizer = tfds.features.text.SubwordTextEncoder.build_from_corpus(
+  outputs_tokenizer = tfds.deprecated.text.SubwordTextEncoder.build_from_corpus(
     outputs, target_vocab_size=target_vocab_size)
   print("Saving tokenizers...")
   inputs_tokenizer.save_to_file(inputs_savepath)
@@ -54,8 +54,8 @@ def create_tokenizers(inputs_outputs, inputs_outputs_savepaths, target_vocab_siz
 def load_tokenizers(inputs_outputs_savepaths):
   print("Loading tokenizers...")
   inputs_savepath, outputs_savepath = inputs_outputs_savepaths
-  inputs_tokenizer = tfds.features.text.SubwordTextEncoder.load_from_file(inputs_savepath)
-  outputs_tokenizer = tfds.features.text.SubwordTextEncoder.load_from_file(outputs_savepath)
+  inputs_tokenizer = tfds.deprecated.text.SubwordTextEncoder.load_from_file(inputs_savepath)
+  outputs_tokenizer = tfds.deprecated.text.SubwordTextEncoder.load_from_file(outputs_savepath)
 
   return inputs_tokenizer, outputs_tokenizer
 
@@ -121,4 +121,3 @@ def prepare_data(batch_size, inputs_outputs, inputs_outputs_tokenizer, max_lengt
 # if __name__ == '__main__':
 #   srt_dt = sort_data(CONVERSE_FILEPATH, LINES_FILEPATH)
 #   print(srt_dt[0])
-
